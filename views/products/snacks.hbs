@@ -1,12 +1,25 @@
-<h1>Craving killers</h1>
+<h1 class="title">Craving killers</h1>
 
+{{/each}}
+
+
+<br>
+<br>
+
+<div class="products">
 {{#each foundProduct}}
 
-<h2>{{name}}</h2>
+<h3>{{name}}</h3>
 <p>
 {{description}}
-{{price}}
-{{category}}
-{{menuType}}
 </p>
+<br>
+<h4>
+{{price}}
+</h4>
+
+<a href="#" class="button2">Add to the cart</a>
+
+<br>
 {{/each}}
+</div>

@@ -20,7 +20,7 @@ router.post('/signUp',isNotLoggedIn, (req, res, next) => {
         .then(foundUser => {
             console.log('here is the found user', foundUser)
             if (foundUser) {
-                console.log('we are inside the if statement')
+                // console.log('we are inside the if statement')
                 res.render('signUp.hbs', { errorMessage: 'User name or email already exists' })
                 return;
             } else {

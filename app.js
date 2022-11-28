@@ -27,11 +27,13 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth.route');
 var productRouter = require('./routes/products.route');
+var ourOrchadRouter = require('./routes/ourOrchard.route');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/product', productRouter);
+app.use('/ourOchard', ourOrchadRouter);
 
 
 

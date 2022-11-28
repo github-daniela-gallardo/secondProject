@@ -1,12 +1,23 @@
-<h1>Our meal plans</h1>
+<h1 class="title">Our meal plans</h1>
 
+<br>
+<br>
+
+<div class="products">
 {{#each foundProduct}}
 
-<h2>{{name}}</h2>
+<h3>{{name}}</h3>
 <p>
 {{description}}
-{{price}}
-{{category: 'meal_plan'}}
-{{menuType}}
 </p>
+<br>
+<p>{{menuType}}</p>
+<h4>
+{{price}}
+</h4>
+
+<a href="#" class="button2">Select this plan</a>
+
+<br>
 {{/each}}
+</div>
