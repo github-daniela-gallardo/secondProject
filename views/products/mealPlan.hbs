@@ -1,0 +1,12 @@
+<h1>Our meal plans</h1>
+
+{{#each foundProduct}}
+
+<h2>{{name}}</h2>
+<p>
+{{description}}
+{{price}}
+{{category: 'meal_plan'}}
+{{menuType}}
+</p>
+{{/each}}
