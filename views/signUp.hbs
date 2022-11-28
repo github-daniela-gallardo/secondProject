@@ -1,0 +1,43 @@
+<h1 class="title">Sign Up</h1>
+<br>
+<br>
+
+<form action="/auth/signUp" method="post" class="form">
+
+  <div>
+    <label for="nameInput">Full Name</label>
+  </div>
+
+  <div>
+    <input type="text" name="fullName" id="nameInput"/>
+  </div>
+
+  <div>
+    <label for="emailInput">Email</label>
+  </div>
+
+  <div>
+    <input type="email" name="email" id="emailInput"/>
+  </div>
+
+  <br />
+
+  <div>
+    <label for="passwordInput">Password</label>
+  </div>
+  <div>
+    <input type="password" name="password" id="passwordInput"/>
+  </div>
+
+  <br />
+  <button type="submit" class="button">Sign up</button>
+
+</form>
+
+<div>
+{{#if errorMessage}}
+<p style="color: red;">{{errorMessage}}</p>
+{{/if}}
+
+</div>
+
