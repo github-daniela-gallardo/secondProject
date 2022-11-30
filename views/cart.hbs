@@ -20,9 +20,15 @@
                 aria-expanded="false"
               > <span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <li><a href="#" style="text-decoration: none; color:black">Remove an item</a></li>
+
+                <form action="/cart/{{this.item._id}}/delete-an-item" method="post">
+                <li><button style="text-decoration: none; color:black">Remove an item</button></li>
+                </form>
+
                 <br>
-                <li><a href="#" style="text-decoration: none; color:black">Remove all</a></li>
+                <form>
+                <li><button href="#" style="text-decoration: none; color:black">Remove all</button></li>
+                </form>
               </ul>
             </div>
           </li>

@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
   background-color: rgba(184, 235, 40, 0.31);
 }
 
@@ -10,25 +10,26 @@
   margin-left: auto;
   margin-right: auto;
 }
-.profileWelcome{
+
+.profileWelcome {
   display: flex;
   flex-direction: column;
- align-items: center;
+  align-items: center;
 }
 
-.profileInfo{
- 
-  background-color:rgba(184, 235, 40, 0.31);
-  border-radius:10px; 
-  padding: 2%;  
-  width: 50%;  
+.profileInfo {
+
+  background-color: rgba(184, 235, 40, 0.31);
+  border-radius: 10px;
+  padding: 2%;
+  width: 50%;
+  margin-left: 0px;
+  font-size: larger;
 }
-.profileInfo a{
+
+.profileInfo a {
   text-decoration: none;
   color: black;
-}
-.profileInfo ul{
-  list-style: none;
 }
 
 
@@ -99,20 +100,32 @@ footer {
   color: black;
 }
 
-.button2{
-  background-color: B8EB28;
-    border: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
-  }
+.button2 {
+  background-color: #B8EB28;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+}
+
+.button3 {
+  background-color: #B8EB28;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+}
 
 
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 500px) {
   .button2 {
     background-color: B8EB28;
     border: none;
@@ -126,11 +139,11 @@ footer {
     border-radius: 20px;
   }
 
-  .profileInfo{
+  .profileInfo {
     margin-left: 20%;
-    background-color:rgba(184, 235, 40, 0.31);
-    border-radius:10%; 
-    padding: 2%;  
+    background-color: rgba(184, 235, 40, 0.31);
+    border-radius: 10%;
+    padding: 2%;
     width: 15%;
   }
 }
@@ -154,7 +167,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.productInside{
+.productInside {
   width: 60%;
   min-width: 250px;
   padding: 10px 12px;
@@ -185,12 +198,12 @@ footer {
   width: 20vw;
 }
 
-.checkOut{
+.checkOut {
   display: flex;
   justify-content: center;
 }
 
-.formCheckout{
-margin: auto;
-padding:2%;
+.formCheckout {
+  margin: auto;
+  padding: 2%;
 }

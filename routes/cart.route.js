@@ -34,6 +34,19 @@ router.get('/shopping-cart', (req, res, next) =>{
     res.render('cart.hbs', {products: cart.generateArray(), totalPrice: cart.totalPrice})
 })
 
+router.post('/:id/delete-an-item', (req, res, next) =>{
+    let cart = new Cart(req.session.cart);
+    console.log(req.session)
+    cart.remove(req.params.id)
+    
+    console.log(req.session)
+    req.session.cart = cart
+    res.redirect('/cart/shopping-cart')
+})
+
+
+
+
 
 
 module.exports = router;

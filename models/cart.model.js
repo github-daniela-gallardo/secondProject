@@ -7,6 +7,7 @@ module.exports = function cart(oldCart) {
 
     //this function is to add to the cart - to check if it exists if not create a new one if yes increment qty and price
     this.add = function(item, id){
+
         let storedItem = this.items[id];
 
         if(!storedItem){
@@ -18,6 +19,17 @@ module.exports = function cart(oldCart) {
         this.totalPrice += storedItem.item.price;
     }
 
+
+    this.remove = function(id){
+
+        let storedItem = this.items[id];
+        console.log(storedItem, this.totalPrice, this.totalQty)
+        this.totalPrice -= storedItem.item.price;
+        
+        this.totalQty -= storedItem.qty;
+        console.log(storedItem, this.totalPrice, this.totalQty)
+        delete this.items[id]
+    }
     this.generateArray = function(){
         const arr =[];
         for (let id in this.items){
@@ -25,4 +37,6 @@ module.exports = function cart(oldCart) {
         }
         return arr;
     }
+
+
 }
