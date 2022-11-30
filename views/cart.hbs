@@ -1,0 +1,41 @@
+<h2 style="text-align: center;">Review your cart</h2>
+
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge"></span>
+                <span>Title</span>
+                <span class="label label-success">${{totalPrice}}</span>
+                <div class="btn-group">
+                    <button class="btn btn-priary btn-xs dropdown-toggle" type="button">Action <span class="caret"></span></button>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Remove item</a></li>
+                        <li><a href="#">Remove all</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <strong>Total: {{totalPrice}}</strong>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+       <button type="button" class="btn button">Check out</button> 
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+       <h2>Your Cart is empty</h2>
+    </div>
+</div>

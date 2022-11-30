@@ -31,7 +31,7 @@ router.post('/signUp',isNotLoggedIn, (req, res, next) => {
                 })
                     .then(createdUser => {
                         console.log('here is the new user', createdUser);
-                        res.redirect('logIn');
+                        res.redirect('/auth/logIn');
                     })
                     .catch((err) => {
                         console.log(err)
@@ -75,7 +75,7 @@ router.post('/logIn', isNotLoggedIn, (req, res, next) => {
 
             req.session.user = foundUser;
 
-            res.redirect('/auth/profile');
+            res.redirect('/');
         })
 
         .catch(err => {
@@ -90,7 +90,7 @@ router.get('/profile', isItLoggedIn, (req, res, next ) => {
 })
 
 
-router.get('/logout', (req, res, next) => {
+router.get('/logout', isItLoggedIn, (req, res, next) => {
     req.session.destroy()
     res.render('logIn.hbs', { errorMessage: "You have logged out" })
 })

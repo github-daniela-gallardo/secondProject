@@ -3,9 +3,10 @@ const Schema = mongoose.Schema
 
 const productSchema = new Schema (
     {
+        imageURL: String,
         name:String,
         description: String, 
-        price: String,
+        price: Number,
         category: {
             type: String,
             enum: [

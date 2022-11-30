@@ -21,20 +21,36 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next) => {
+  if(req.session.user){
+    res.locals.isItLoggedIn = true
+  } else {
+    res.locals.isItLoggedIn = false
+  }
+  res.locals.cart = req.session.cart
+  next()
+})
+
 //all routes here
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth.route');
 var productRouter = require('./routes/products.route');
 var ourOrchadRouter = require('./routes/ourOrchard.route');
+var howItWorkRouter = require('./routes/howItWork');
+var cartRouter = require('./routes/cart.route');
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/product', productRouter);
 app.use('/ourOchard', ourOrchadRouter);
-
+app.use('/howItWork', howItWorkRouter);
+app.use('/cart', cartRouter);
 
 
 // catch 404 and forward to error handler

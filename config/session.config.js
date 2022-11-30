@@ -24,7 +24,7 @@ module.exports = app => {
       store: MongoStore.create({
         mongoUrl:
           process.env.MONGODB_URI ||
-          "mongodb://localhost/lab-ironrooms",
+          "mongodb://localhost/theOchardWebsite",
 
 
       }),

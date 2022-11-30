@@ -1,23 +1,54 @@
 <h1 class="title">Our meal plans</h1>
 
-<br>
-<br>
+<br />
+<br />
 
-<div class="products">
+{{! <div class="text-center products"> }}
+{{!-- {{#each foundProduct}}
+
+  <div class="row">
+    {{#each this}}
+      <div class="col-sm-6 col-md-4">
+        <div class="card" style="width: 25rem;">
+          <img src="{{this.imageURL}}" class="card-img-top" alt="img" />
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <br />
+            <p class="card-text">{{this.menuType}}</p>
+            <br />
+            <br />
+            <h5 class="card-text">{{this.price}}</h5>
+            <br />
+            <a href="#" class="button2">Select this plan</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+{{/each}} --}}
+
+{{! </div> }}
+
 {{#each foundProduct}}
+  <div class="products">
 
-<h3>{{name}}</h3>
-<p>
-{{description}}
-</p>
-<br>
-<p>{{menuType}}</p>
-<h4>
-{{price}}
-</h4>
+    <img src="{{imageURL}}" alt="img" class="productImg" />
+    <br />
+    <br />
 
-<a href="#" class="button2">Select this plan</a>
+    <div>
+      <h3>{{name}}</h3>
+      <br />
+      <p>{{description}}</p>
+      <br />
+      <p>{{menuType}}</p>
+      <h4>${{price}}</h4>
+      <br />
+      <a href="/cart/add-to-cart/{{this._id}}" class="button2">Select this plan</a>
 
-<br>
+    </div>
+
+  </div>
 {{/each}}
-</div>

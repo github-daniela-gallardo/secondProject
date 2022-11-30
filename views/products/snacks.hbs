@@ -1,25 +1,25 @@
 <h1 class="title">Craving killers</h1>
 
-{{/each}}
+<br />
+<br />
 
-
-<br>
-<br>
-
-<div class="products">
 {{#each foundProduct}}
+  <div class="products">
 
-<h3>{{name}}</h3>
-<p>
-{{description}}
-</p>
-<br>
-<h4>
-{{price}}
-</h4>
+    <img src="{{imageURL}}" alt="img" class="productImg" />
+    <br />
+    <br />
 
-<a href="#" class="button2">Add to the cart</a>
+    <div>
+      <h3>{{name}}</h3>
+      <br />
+      <p>{{description}}</p>
+      <br />
+      <h4>${{price}}</h4>
+      <br />
+      <a href="/cart/add-to-cart/{{this._id}}" class="button2">Select this plan</a>
 
-<br>
+    </div>
+
+  </div>
 {{/each}}
-</div>
