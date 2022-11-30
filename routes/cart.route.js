@@ -3,9 +3,9 @@ const Cart = require('../models/cart.model');
 const Product = require('../models/product.model');
 
 //cart routes here
-router.get('/', (req, res, next) => {
-    res.render('cart.hbs')
-})
+// router.get('/', (req, res, next) => {
+//     res.render('cart.hbs')
+// })
 
 
 router.get('/add-to-cart/:id', (req, res, next) =>{
@@ -24,7 +24,7 @@ router.get('/add-to-cart/:id', (req, res, next) =>{
 
 });
 
-router.get('shopping-cart', (req, res, next) =>{
+router.get('/shopping-cart', (req, res, next) =>{
     if(!req.session.cart) {
         return res.render('cart.hbs', {products: null});
     }

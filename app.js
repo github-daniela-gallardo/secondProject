@@ -30,7 +30,6 @@ app.use((req, res, next) => {
   res.locals.cart = req.session.cart
   next()
 })
-
 //all routes here
 
 
@@ -41,6 +40,7 @@ var productRouter = require('./routes/products.route');
 var ourOrchadRouter = require('./routes/ourOrchard.route');
 var howItWorkRouter = require('./routes/howItWork');
 var cartRouter = require('./routes/cart.route');
+var checkOutRouter = require('./routes/checkOut.route');
 
 
 
@@ -51,6 +51,7 @@ app.use('/product', productRouter);
 app.use('/ourOchard', ourOrchadRouter);
 app.use('/howItWork', howItWorkRouter);
 app.use('/cart', cartRouter);
+app.use('/checkOut', checkOutRouter)
 
 
 // catch 404 and forward to error handler

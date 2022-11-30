@@ -1,41 +1,63 @@
-<h2 style="text-align: center;">Review your cart</h2>
-
-<div class="row">
+{{#if products}}
+  <h2 style="text-align: center;">Review your cart</h2>
+<br>
+  <div class="row checkOut">
     <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-        <ul class="list-group">
-            <li class="list-group-item">
-                <span class="badge"></span>
-                <span>Title</span>
-                <span class="label label-success">${{totalPrice}}</span>
-                <div class="btn-group">
-                    <button class="btn btn-priary btn-xs dropdown-toggle" type="button">Action <span class="caret"></span></button>
+      <ul class="list-group">
+        {{#each products}}
 
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Remove item</a></li>
-                        <li><a href="#">Remove all</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <span class="badge bg-success rounded-pill">{{this.qty}}</span>
+            <strong>{{this.item.name}}</strong>
+            <span>${{this.price}}</span>
+            <div class="btn-group">
+              <button
+                class="btn btn-light dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              > <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#" style="text-decoration: none; color:black">Remove an item</a></li>
+                <br>
+                <li><a href="#" style="text-decoration: none; color:black">Remove all</a></li>
+              </ul>
+            </div>
+          </li>
+
+        {{/each}}
+      </ul>
 
     </div>
-</div>
+  </div>
 
-<div class="row">
-    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-        <strong>Total: {{totalPrice}}</strong>
-    </div>
-</div>
-<hr>
-<div class="row">
-    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-       <button type="button" class="btn button">Check out</button> 
-    </div>
-</div>
+  <div class="row checkOut">
+    <div class="col-sm-6 col-md-6 text-center">
+        <br>
 
-
-<div class="row">
-    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-       <h2>Your Cart is empty</h2>
+      <strong>Total: ${{totalPrice}}</strong>
     </div>
-</div>
+  </div>
+  
+  <br />
+  <div class="row text-center checkOut">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+      <a href="/checkOut" type="button" class="btn button">Check out</a>
+    </div>
+  </div>
+
+{{else}}
+  <div class="empty">
+
+    <h2>Your Cart is empty</h2>
+    <img
+      src="https://appstickers-cdn.appadvice.com/1513454005/835962965/54d2ee4561e8827f8a8f0b23437a4e27-5.png"
+      alt="img"
+    />
+    <a href="/product" class="button2">Start shopping here!</a>
+
+  </div>
+
+{{/if}}
