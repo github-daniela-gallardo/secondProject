@@ -17,13 +17,25 @@
   align-items: center;
 }
 
+.details{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.editSectiton{
+  
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
 .profileInfo {
 
   background-color: rgba(184, 235, 40, 0.31);
   border-radius: 10px;
   padding: 2%;
   width: 50%;
-  margin-left: 0px;
   font-size: larger;
 }
 
@@ -75,9 +87,16 @@
 footer {
   /* height: 15%; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 85px;
+  align-items: center;
+  padding: 1%;
+  font-size: larger;
 }
+
+
+
 
 .button {
   transition-duration: 0.4s;
@@ -113,6 +132,19 @@ footer {
 }
 
 .button3 {
+  background-color: rgba(184, 235, 40, 0.31);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.edit {
   background-color: #B8EB28;
   border: none;
   color: black;
@@ -122,6 +154,7 @@ footer {
   font-size: 12px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 20px;
+  padding: 8px;
 }
 
 
@@ -140,7 +173,7 @@ footer {
   }
 
   .profileInfo {
-    margin-left: 20%;
+    /* margin-left: 20%; */
     background-color: rgba(184, 235, 40, 0.31);
     border-radius: 10%;
     padding: 2%;
