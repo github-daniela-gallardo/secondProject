@@ -2,6 +2,8 @@ const router = require('express').Router()
 const Cart = require('../models/cart.model');
 const Product = require('../models/product.model');
 
+
+
 //cart routes here
 // router.get('/', (req, res, next) => {
 //     res.render('cart.hbs')

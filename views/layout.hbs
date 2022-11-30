@@ -23,7 +23,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"><img
             alt="Brand"
@@ -68,17 +68,16 @@
            
             </li>
             <li class="nav-item">
-              {{#if isItLoggedIn}}
+              
               <a class="nav-link active" href="/auth/logOut">Log out</a>
-              {{/if}}
+             
             </li>
           </ul>
         </div>
       
         <a href="/cart/shopping-cart" class="cart"><i class="fa-solid fa-cart-shopping cartIcon"></i>
-          
-          <span class="badge rounded-pill bg-danger">{{cart.totalQty}}</span>  Shopping cart</a>
-          
+          <span class="badge rounded-pill bg-danger">{{#if cart}} {{cart.totalQty}} {{else}} 0 {{/if}}</span>  Shopping cart</a>
+         
       </div>
     </nav>
 

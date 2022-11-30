@@ -1,3 +1,7 @@
+.navbar{
+  background-color: rgba(184, 235, 40, 0.31);
+}
+
 .form {
   display: flex;
   align-items: center;
@@ -6,6 +10,27 @@
   margin-left: auto;
   margin-right: auto;
 }
+.profileWelcome{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+
+.profileInfo{
+ 
+  background-color:rgba(184, 235, 40, 0.31);
+  border-radius:10px; 
+  padding: 2%;  
+  width: 50%;  
+}
+.profileInfo a{
+  text-decoration: none;
+  color: black;
+}
+.profileInfo ul{
+  list-style: none;
+}
+
 
 .title {
   text-align: center;
@@ -100,6 +125,14 @@ footer {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
   }
+
+  .profileInfo{
+    margin-left: 20%;
+    background-color:rgba(184, 235, 40, 0.31);
+    border-radius:10%; 
+    padding: 2%;  
+    width: 15%;
+  }
 }
 
 .bestSeller {
@@ -114,13 +147,24 @@ footer {
 }
 
 .products {
-  /* margin-left: auto;
-  margin-right: auto; */
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /* padding: 30px; */
-  width: 20vw;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.productInside{
+  width: 60%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid gainsboro;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 .howdoesitwork {
@@ -144,4 +188,9 @@ footer {
 .checkOut{
   display: flex;
   justify-content: center;
+}
+
+.formCheckout{
+margin: auto;
+padding:2%;
 }

@@ -33,22 +33,23 @@
 
 {{#each foundProduct}}
   <div class="products">
-
-    <img src="{{imageURL}}" alt="img" class="productImg" />
-    <br />
-    <br />
-
-    <div>
-      <h3>{{name}}</h3>
+    <div class="productInside">
+      <img src="{{imageURL}}" alt="img" class="productImg" />
       <br />
-      <p>{{description}}</p>
       <br />
-      <p>{{menuType}}</p>
-      <h4>${{price}}</h4>
-      <br />
-      <a href="/cart/add-to-cart/{{this._id}}" class="button2">Select this plan</a>
 
+      <div>
+        <h3>{{name}}</h3>
+        <br />
+        <p>{{description}}</p>
+        <br />
+        <p>{{menuType}}</p>
+        <h4>${{price}}</h4>
+        <br />
+        <a href="/cart/add-to-cart/{{this._id}}" class="button2">Select this
+          plan</a>
+
+      </div>
     </div>
-
   </div>
 {{/each}}

@@ -1,14 +1,18 @@
+<div style="padding: 1%;">
 <a href="/cart/shopping-cart" style=" text-decoration: none; color:black"><i
     class="fa-regular fa-circle-left"
   ></i>
   Go back to the cart</a>
+  </div>
 
 
 
-<form class="row g-3">
+<form class="row g-3 formCheckout" method="post">
 <h2 style="text-align: center;">Check Out</h2>
 
-<h4>Shipping Address</h4>
+<h5 style="background-color: rgba(184, 235, 40, 0.31); width: auto;">Your total: $ {{total}}</h5>
+
+<h4 >Shipping Address</h4>
   <div class="col-md-2">
     <label for="inputName" class="form-label">Full name</label>
     <input
@@ -76,7 +80,7 @@
 
   <div class="col-md-2">
     <label for="inputZip" class="form-label">Zip code</label>
-    <input type="text" class="form-control" id="inputZip" />
+    <input type="text" class="form-control" name="zipCode" id="inputZip" />
   </div>
 
   <div class="form-floating">
@@ -85,15 +89,16 @@
       placeholder="Leave a comment here"
       id="floatingTextarea2"
       style="height: 100px"
+      name="textArea"
     ></textarea>
     <label for="floatingTextarea2">Enter here your allergies, or any important information.</label>
   </div>
 
 <h4>Card Info</h4>
   <div class="col-md-2">
-    <label for="inputName" class="form-label">Full name</label>
+    <label for="inputName" class="form-label">Cardholder's name</label>
     <input
-      name="fullName"
+      name="cardName"
       type="text"
       class="form-control"
       id="inputName"
@@ -120,15 +125,16 @@
       class="form-control"
       id="inputExpiration"
       placeholder="MM/YYYY"
+      name="expiration"
     />
   </div>
 
   <div class="col-md-2">
     <label for="inputCVC" class="form-label">CVC</label>
-    <input type="text" class="form-control" id="inputCVC" />
+    <input type="text" class="form-control" id="inputCVC" name="cvc"/>
   </div>
 
-<h4>Billing Address</h4>
+{{!-- <h4>Billing Address</h4>
   <div class="col-md-2">
     <label for="inputName" class="form-label">Full name</label>
     <input
@@ -136,32 +142,11 @@
       type="text"
       class="form-control"
       id="inputName"
-      placeholder="your full name here"
+      placeholder="Name and last name"
     />
   </div>
 
-  <div class="col-md-2">
-    <label for="inputPhoneNumber" class="form-label">Phone Number</label>
-    <input
-      name="phoneNumber"
-      type="text"
-      class="form-control"
-      id="inputPhoneNumber"
-      placeholder="000 000 0000"
-    />
-  </div>
-
-  <div class="col-md-2">
-    <label for="inputEmail" class="form-label">Email</label>
-    <input
-      name="email"
-      type="email"
-      class="form-control"
-      id="inputEmail"
-      placeholder="example@example.com"
-    />
-  </div>
-
+  
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address</label>
     <input
@@ -197,18 +182,24 @@
   <div class="col-md-2">
     <label for="inputZip" class="form-label">Zip code</label>
     <input type="text" class="form-control" id="inputZip" />
-  </div>
+  </div> --}}
 
 
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck" />
       <label class="form-check-label" for="gridCheck">
-        Same as shipping address
+        Billing address same as shipping address
       </label>
     </div>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn button2 ">Submit</button>
   </div>
 </form>
+
+{{#if errorMessage}}
+<p style="color: red; text-align: center">{{errorMessage}}</p>
+{{/if}}
+
+
