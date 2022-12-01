@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   if(req.session.user){
     res.locals.isItLoggedIn = true
   } else {
-    res.locals.isItLoggedIn = false
+    res.locals.isNotLoggedIn = true
   }
   res.locals.cart = req.session.cart
   next()

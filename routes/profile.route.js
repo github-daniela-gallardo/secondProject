@@ -32,8 +32,8 @@ router.get('/myAddress', (req, res, next) => {
 })
 
 // delete one address 
-router.post('/myAddress-delete', (req, res, next) => {
-    CheckOut.findByIdAndDelete(req.params.CheckOut)
+router.post('/myAddress-delete/:checkoutId', (req, res, next) => {
+    CheckOut.findByIdAndDelete(req.params.checkoutId)
     .then( () => {
         //foundAddress.delete()
         res.redirect('/profile/myAddress')

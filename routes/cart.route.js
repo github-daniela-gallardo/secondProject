@@ -34,6 +34,7 @@ router.get('/shopping-cart', (req, res, next) =>{
     res.render('cart.hbs', {products: cart.generateArray(), totalPrice: cart.totalPrice})
 })
 
+//deletes all items
 router.post('/:id/delete-an-item', (req, res, next) =>{
     let cart = new Cart(req.session.cart);
     console.log(req.session)
@@ -45,6 +46,7 @@ router.post('/:id/delete-an-item', (req, res, next) =>{
 })
 
 
+//adds one item 
 router.post('/:id/add-an-item', (req, res, next) =>{
     let cart = new Cart(req.session.cart);
     console.log(req.session)

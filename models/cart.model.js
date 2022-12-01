@@ -24,7 +24,7 @@ module.exports = function cart(oldCart) {
 
         let storedItem = this.items[id];
         console.log(storedItem, this.totalPrice, this.totalQty)
-        this.totalPrice -= storedItem.item.price;
+        this.totalPrice -= storedItem.item.price * storedItem.qty;
         
         this.totalQty -= storedItem.qty;
         console.log(storedItem, this.totalPrice, this.totalQty)

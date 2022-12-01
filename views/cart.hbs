@@ -10,27 +10,34 @@
             class="list-group-item d-flex justify-content-between align-items-center"
           >
 
-            <span>
-              {{! this one will remove one  }}
-              <form action="/cart/{{this.item._id}}/add-an-item" method="post">
-                <button class="button4"><i class="fa-solid fa-minus"></i></button>
+            <p><b>{{this.item.name}}</b></p>
+            <p><b>${{this.price}}</b></p>
+
+          
+            {{! this one will delete one  }}
+            {{!-- <div>
+              <form
+                action="/cart/{{this.item._id}}/delete-an-item"
+                method="post"
+              >
+                <button class="button4"><i
+                    class="fa-solid fa-minus"
+                  ></i></button>
               </form>
-            </span>
-            
-            <span class="badge bg-success rounded-pill">{{this.qty}}</span>
+            </div> --}}
 
+            <div class="button4">Qty: {{this.qty}}</div>
 
-          <span>
-              {{! this one will add one  }}
+            {{! this one will add one  }}
+            <div>
               <form action="/cart/{{this.item._id}}/add-an-item" method="post">
-                <button class="button4"><i class="fa-solid fa-plus">
-                  </i></button>
+                <button class=" button4"><i
+                    class="fa-solid fa-plus"
+                  ></i></button>
               </form>
-            </span>
+            </div>
+      
 
-
-            <strong>{{this.item.name}}</strong>
-            <span>${{this.price}}</span>
 
             <div class="btn-group">
 
@@ -40,7 +47,7 @@
                 method="post"
               >
                 <button class="button4"><i class="fa-solid fa-trash">
-                  </i></button>
+                  </i>Delete all</button>
               </form>
 
             </div>

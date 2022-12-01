@@ -1,6 +1,12 @@
 .navbar {
   background-color: rgba(184, 235, 40, 0.31);
+  
 }
+
+.container-fluid{
+  margin-left: 0%;
+}
+
 
 .form {
   display: flex;
