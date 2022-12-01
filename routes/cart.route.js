@@ -45,6 +45,17 @@ router.post('/:id/delete-an-item', (req, res, next) =>{
 })
 
 
+router.post('/:id/add-an-item', (req, res, next) =>{
+    let cart = new Cart(req.session.cart);
+    console.log(req.session)
+    cart.add(null, req.params.id)
+    
+    console.log(req.session)
+    req.session.cart = cart
+    res.redirect('/cart/shopping-cart')
+})
+
+
 
 
 

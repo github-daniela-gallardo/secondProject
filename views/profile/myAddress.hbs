@@ -1,0 +1,111 @@
+<div
+  class="d-flex justify-content-evenly align-items-center"
+  style="padding: 1%;"
+>
+
+  <div>
+    <a style="text-decoration: none; color:black;" href="/auth/profile"><i
+        class="fa-regular fa-circle-left"
+      > </i>
+      Go back</a>
+  </div>
+
+  <!-- Example split danger button -->
+  <div class="btn-group">
+   <a href='/auth/profile' type="button" class="btn button4"><i class="fa-regular fa-user"></i> User information</a>
+    <button
+      type="button"
+      class="btn button4 dropdown-toggle dropdown-toggle-split"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/profile/personal-info">Edit personal information</a></li>
+      <li><a class="dropdown-item" href="/profile/myAddress">My address</a></li>
+      <li><a class="dropdown-item" href="/profile/recentOrder">My recent orders</a></li>
+      <li><hr class="dropdown-divider" /></li>
+      <li><a class="dropdown-item" href="/auth/logOut">Log out</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="profileWelcome">
+  
+  <img
+    src="https://www.pinclipart.com/picdir/big/373-3736113_avocado-son-clipart.png"
+    alt="profilePic"
+    class="profilePic"
+  />
+<h2>My directory</h2>
+  <div class="editSectiton">
+    
+    <br>
+{{#each foundCheckOutArr}}
+    <form action="/profile/myAddress-delete" method="post">
+
+    <div class="col-12">
+    <label for="label" class="form-label">Label</label>
+    <input
+      name="label"
+      type="text"
+      class="form-control"
+      id="label"
+      placeholder="name of your address"
+      value="{{label}}"
+    />
+  </div>
+
+
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input
+          name="address"
+          type="text"
+          class="form-control"
+          id="inputAddress"
+          value="{{address}}"
+        />
+      </div>
+
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Address 2</label>
+        <input
+          name="address2"
+          type="text"
+          class="form-control"
+          id="inputAddress2"
+          placeholder="Apartment, studio, or floor"
+           value="{{address2}}"
+        />
+      </div>
+
+      <div class="col-md-12">
+        <label for="inputCity" class="form-label">City</label>
+        <input name="city" type="text" class="form-control" id="inputCity" value="{{city}}" />
+      </div>
+
+      <div class="col-md-12">
+        <label for="inputState" class="form-label">State</label>
+        <input name="state" type="text" class="form-control" id="inputState" value="{{state}}"/>
+      </div>
+
+      <div class="col-md-12">
+        <label for="inputZip" class="form-label">Zip code</label>
+        <input type="text" class="form-control" name="zipCode" id="inputZip" value="{{zipCode}}"/>
+      </div>
+      <br />
+
+      <div >
+        <br />
+        <button  type="submit" class="button4">Delete this address</button>
+      </div>
+    <hr>
+    </form>
+
+
+{{/each}}
+  </div>
+
+</div>

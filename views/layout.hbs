@@ -60,6 +60,8 @@
             <li class="nav-item">
               <a class="nav-link active" href="/howItWork">How it works</a>
             </li>
+
+            {{!-- {{#if isItLoggedIn}} --}}
             <li class="nav-item">
               <a class="nav-link active" href="/auth/signUp">Sign Up</a>
             </li>
@@ -68,6 +70,7 @@
               <a class="nav-link active button3" href="/auth/logIn">Log In</a>
 
             </li>
+            {{!-- {{/if}} --}}
 
           </ul>
         </div>
@@ -90,20 +93,20 @@
       <br />
       <img src="../images/LOGO PRINCIPAL1.png" alt="logo" class="logoBottom" />
 
-      <div>
-        <a
-          href="https://www.instagram.com/theor.chard/?r=nametag"
-          style="text-decoration: none; color:black;"
-        ><i class="fa-brands fa-instagram"></i> Follow us: theor.chard</a>
-      </div>
+      <div class="footerInfo">
+        <div>
+          <a
+            href="https://www.instagram.com/theor.chard/?r=nametag"
+            style="text-decoration: none; color:black;"
+          ><i class="fa-brands fa-instagram"></i> Follow us  theor.chard</a>
+        </div>
 
-      <br />
-      
-      <div>
-        <a href="#" style="text-decoration: none; color:black;"><i
-            class="fa-regular fa-envelope"
-          ></i>
-          info@theorchardorganic.com</a>
+        <div>
+          <a href="#" style="text-decoration: none; color:black;"><i
+              class="fa-regular fa-envelope"
+            ></i>
+            info@theorchardorganic.com</a>
+        </div>
       </div>
 
     </footer>
@@ -113,5 +116,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+
   </body>
+
 </html>

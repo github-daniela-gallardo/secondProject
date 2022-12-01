@@ -28,6 +28,7 @@ console.log(req.body)
         fullName: req.body.fullName,
         phoneNumber: req.body.phoneNumber,
         email: req.body.email,
+        label: req.body.label,
         address: req.body.address,
         address2: req.body.address2,
         city:req.body.city,

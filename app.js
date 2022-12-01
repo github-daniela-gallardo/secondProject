@@ -41,7 +41,7 @@ var ourOrchadRouter = require('./routes/ourOrchard.route');
 var howItWorkRouter = require('./routes/howItWork');
 var cartRouter = require('./routes/cart.route');
 var checkOutRouter = require('./routes/checkOut.route');
-
+var profileRouter =require('./routes/profile.route');
 
 
 app.use('/', indexRouter);
@@ -51,7 +51,8 @@ app.use('/product', productRouter);
 app.use('/ourOchard', ourOrchadRouter);
 app.use('/howItWork', howItWorkRouter);
 app.use('/cart', cartRouter);
-app.use('/checkOut', checkOutRouter)
+app.use('/checkOut', checkOutRouter);
+app.use('/profile', profileRouter);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,79 @@
+<div
+  class="d-flex justify-content-evenly align-items-center"
+  style="padding: 1%;"
+>
+
+  <div>
+    <a style="text-decoration: none; color:black;" href="/auth/profile"><i
+        class="fa-regular fa-circle-left"
+      > </i>
+      Go back</a>
+  </div>
+
+  <!-- Example split danger button -->
+  <div class="btn-group">
+  <a href='/auth/profile' type="button" class="btn button4"><i class="fa-regular fa-user"></i> User information</a>
+  <button type="button" class="btn button4 dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/profile/personal-info">Edit personal information</a></li>
+    <li><a class="dropdown-item" href="/profile/myAddress">My address</a></li>
+    <li><a class="dropdown-item" href="/profile/recentOrder">My recent orders</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/auth/logOut">Log out</a></li>
+  </ul>
+</div>
+</div>
+
+
+<div class="profileWelcome">
+  <img
+    src="https://www.pinclipart.com/picdir/big/373-3736113_avocado-son-clipart.png"
+    alt="profilePic"
+    class="profilePic"
+  />
+  <h2>Personal information</h2>
+
+  <div class="editSectiton">
+
+    <form action="/profile/personal-info" method="post">
+
+      <div>
+        <label for="nameInput">Full Name</label>
+      </div>
+
+      <div>
+        <input type="text" name="fullName" id="nameInput" value="{{user.fullName}}" />
+      </div>
+
+      <div>
+        <label for="emailInput">New Email</label>
+      </div>
+
+      <div>
+        <input type="email" name="email" id="emailInput" value="{{user.email}}"/>
+      </div>
+
+      <br />
+
+      <div>
+        <label for="passwordInput">New password</label>
+      </div>
+
+      <div>
+        <input type="password" name="password" id="passwordInput" />
+      </div>
+
+      <br />
+      <button type="submit" class="button3">Update</button>
+
+      <br />
+
+    </form>
+  </div>
+  {{#if errorMessage}}
+<p style="color: red; text-align: center">{{errorMessage}}</p>
+
+{{/if}}
+</div>
