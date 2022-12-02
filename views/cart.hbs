@@ -13,37 +13,39 @@
             <p><b>{{this.item.name}}</b></p>
             <p><b>${{this.price}}</b></p>
 
-          
-            {{! this one will delete one  }}
-            {{!-- <div>
-              <form
-                action="/cart/{{this.item._id}}/delete-an-item"
-                method="post"
-              >
-                <button class="button4"><i
-                    class="fa-solid fa-minus"
-                  ></i></button>
-              </form>
-            </div> --}}
+            <div class=" d-flex justify-content-evenly" style="width: 30%;">
+              {{! this one will delete one  }}
+              <div>
+                <form
+                  action="/cart/{{this.item._id}}/delete-an-item"
+                  method="post"
+                >
+                  <button class="button4"><i
+                      class="fa-solid fa-minus"
+                    ></i></button>
+                </form>
+              </div>
 
-            <div class="button4">Qty: {{this.qty}}</div>
-
-            {{! this one will add one  }}
-            <div>
-              <form action="/cart/{{this.item._id}}/add-an-item" method="post">
-                <button class=" button4"><i
-                    class="fa-solid fa-plus"
-                  ></i></button>
-              </form>
+              <div >Qty: {{this.qty}}</div>
+              
+              {{! this one will add one  }}
+              <div>
+                <form
+                  action="/cart/{{this.item._id}}/add-an-item"
+                  method="post"
+                >
+                  <button class="button4"><i
+                      class="fa-solid fa-plus"
+                    ></i></button>
+                </form>
+              </div>
             </div>
-      
-
 
             <div class="btn-group">
 
               {{! this button deletes everything  }}
               <form
-                action="/cart/{{this.item._id}}/delete-an-item"
+                action="/cart/{{this.item._id}}/delete-all-items"
                 method="post"
               >
                 <button class="button4"><i class="fa-solid fa-trash">

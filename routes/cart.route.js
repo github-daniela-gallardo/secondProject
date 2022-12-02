@@ -35,15 +35,26 @@ router.get('/shopping-cart', (req, res, next) =>{
 })
 
 //deletes all items
-router.post('/:id/delete-an-item', (req, res, next) =>{
+router.post('/:id/delete-all-items', (req, res, next) =>{
     let cart = new Cart(req.session.cart);
     console.log(req.session)
-    cart.remove(req.params.id)
+    cart.removeAll(req.params.id)
     
     console.log(req.session)
     req.session.cart = cart
     res.redirect('/cart/shopping-cart')
 })
+
+//this will delete one item
+router.post('/:id/delete-an-item', (req, res, next) =>{
+    let cart = new Cart(req.session.cart);
+    cart.remove(null, req.params.id)
+    
+    // console.log(req.session)
+    req.session.cart = cart
+    res.redirect('/cart/shopping-cart')
+})
+
 
 
 //adds one item 

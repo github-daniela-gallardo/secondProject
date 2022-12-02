@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+// fix the address and put it into the user model - leave here stuff that im not going to use later ....
 const checkOutSchema =  new Schema (
     {
         fullName: {type: String,  required : true},
